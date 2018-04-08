@@ -100,7 +100,6 @@
   [:div {:class "address-form"}
    [:h1 "Find my next election"]
    [:form {:action "/search" :method "post"}
-    (anti-forgery-field)
     [:p "Enter the address where you are registered to vote"]
     [:div
      [:label {:for "street-field"} "Street:"]
@@ -129,6 +128,7 @@
               :name "zip"
               :size "10"}]]
     [:div.button
+    (anti-forgery-field)
      [:button {:type "submit"} "Search"]]]])
 
 (defn page [request]
