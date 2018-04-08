@@ -8,7 +8,11 @@
 (defroutes app
   (GET "/" [] home/page)
   (route/resources "/")
-  (route/not-found "Not found"))
+  (route/not-found "Not found")
+
+  (GET "/search" [] "Search")
+
+)
 
 (def handler
   (-> app
